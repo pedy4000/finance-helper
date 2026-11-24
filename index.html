@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -23,7 +23,7 @@
 --brand:#3f78d8;--brand2:#234f9f;--on-brand:#fff8ea;--accent:#3987e5;--accent-soft:#1d3a66;--s2:#d95926;--s3:#199e70;--other:#4a556b;--goodtext:#3fc45a;--fill:#1f2a41;
 --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.25)}}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;height:100%}
+html,body{margin:0;height:100%}html{touch-action:manipulation}
 body{background:var(--page);color:var(--ink);font:14px/1.6 Vazirmatn,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%;overscroll-behavior-y:none}
 button,input,select{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none;padding:0}
@@ -58,7 +58,7 @@ h1,h2,h3,p{margin:0}
 .btn:disabled{opacity:.45}.btn.ghost{background:var(--fill);color:var(--ink);font-weight:600;box-shadow:none}
 .mini{padding:6px 13px;border-radius:999px;background:var(--accent-soft);color:var(--brand2);font-size:12.5px;font-weight:600;white-space:nowrap}@media (prefers-color-scheme:dark){.mini{color:var(--on-brand)}}
 .field{display:grid;gap:5px}.field label{font-size:12px;color:var(--ink2)}
-.input{width:100%;padding:11px 12px;border-radius:12px;border:1px solid var(--border);background:var(--surface);font-size:15px;min-width:0}
+.input{width:100%;padding:11px 12px;border-radius:12px;border:1px solid var(--border);background:var(--surface);font-size:16px;min-width:0}
 .input:focus{outline:2px solid var(--brand);outline-offset:1px}
 .amount{font-size:30px;font-weight:700;text-align:center;padding:12px;direction:ltr}
 .hint{font-size:12.5px;color:var(--muted);text-align:center;min-height:20px}
@@ -89,7 +89,7 @@ svg{display:block;width:100%;height:auto;overflow:visible}svg text{font-family:i
 .tx{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 10px;padding:9px 0;border-top:1px solid var(--grid)}.tx:first-child{border-top:0}
 .tx .t{font-size:14px}.tx .s{font-size:12px;color:var(--muted);grid-column:1}.tx .v{font-weight:600;text-align:end;white-space:nowrap;grid-row:1;grid-column:2}.tx .del{grid-row:2;grid-column:2;justify-self:end;font-size:12px;color:var(--muted)}
 .tx .v.in{color:var(--goodtext)}
-.items{display:grid;gap:6px}.item{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.7fr) minmax(0,1fr) auto;gap:6px;align-items:center}.item .input{padding:9px 10px;font-size:14px}
+.items{display:grid;gap:6px}.item{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.7fr) minmax(0,1fr) auto;gap:6px;align-items:center}.item .input{padding:9px 10px}
 .spin{display:grid;place-items:center;padding:60px 0;color:var(--muted)}
 .gtabs{display:flex;gap:6px;overflow-x:auto;padding:1px 1px 3px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.gtabs::-webkit-scrollbar{display:none}
 .gtabs button{flex:none;padding:6px 13px;border-radius:999px;background:var(--fill);font-size:12.5px;color:var(--ink2)}.gtabs button.on{background:var(--accent-soft);color:var(--brand2);font-weight:700}
@@ -104,11 +104,15 @@ svg{display:block;width:100%;height:auto;overflow:visible}svg text{font-family:i
 .cal .d{aspect-ratio:1;border-radius:999px;font-size:13.5px;display:grid;place-items:center;color:var(--ink)}.cal .d.fut{color:var(--muted)}
 .cal .d.today{box-shadow:inset 0 0 0 1.5px var(--brand)}.cal .d.on{background:var(--brand);color:var(--on-brand);font-weight:700}
 .itemc{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:8px;display:grid;gap:6px}
-.ihead{display:flex;gap:6px;align-items:center}.ihead .input{flex:1}.irow{display:grid;grid-template-columns:1fr 1.4fr;gap:6px}.itemc .input{padding:9px 10px;font-size:14px}
+.ihead{display:flex;gap:6px;align-items:center}.ihead .input{flex:1}.irow{display:grid;grid-template-columns:1fr 1.4fr;gap:6px}.itemc .input{padding:9px 10px}
 .sug{display:flex;flex-wrap:wrap;gap:6px}.sug:empty{display:none}
 .sopt{padding:6px 12px;border-radius:999px;background:var(--accent-soft);color:var(--brand2);font-size:13px}.sopt.add{background:var(--fill);color:var(--ink)}
 @media (prefers-color-scheme:dark){.sopt{color:var(--on-brand)}}
 .pending{opacity:.55}
+.plan{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px;display:grid;gap:10px}
+.step{display:flex;align-items:center;gap:8px}.step button{width:40px;height:40px;border-radius:999px;background:var(--fill);font-size:20px;line-height:1;color:var(--ink)}.step b{min-width:72px;text-align:center;font-size:15px}
+.mrows{display:grid;gap:2px;border-top:1px solid var(--grid);padding-top:8px}.mrow{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--ink2)}.mrow b{color:var(--ink);font-weight:600;white-space:nowrap}
+.acct{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:10px 0 6px}.acct:first-of-type{margin-top:0}.acct .t{font-size:14px;font-weight:600}.acct .v{font-size:14px;font-weight:600;white-space:nowrap}.acct .v small{font-weight:400;color:var(--muted);font-size:11.5px;margin-inline-start:4px}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -179,6 +183,8 @@ const native = (x, unit) => unit === TOMAN ? moneyText(x) : num(x, 4) + ' ' + un
 const pct = x => num(x * 100, 1) + '٪';
 const MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
 const dateText = d => { const p = d.split('/').map(Number); return fa(p[2]) + ' ' + MONTHS[p[1] - 1]; };
+function shiftMonth(key, n) { let y = +key.slice(0, 4), m = +key.slice(5, 7) + n; while (m < 1) { m += 12; y--; } while (m > 12) { m -= 12; y++; } return y + '/' + String(m).padStart(2, '0'); }
+const monthLabel = (key, base) => MONTHS[+key.slice(5, 7) - 1] + (base && key.slice(0, 4) !== base.slice(0, 4) ? ' ' + fa(key.slice(0, 4)) : '');
 
 // --- تقویم شمسی (برای انتخاب تاریخ)
 const jDays = (y, m) => m <= 6 ? 31 : m <= 11 ? 30 : ([1, 5, 9, 13, 17, 22, 26, 30].includes(y % 33) ? 30 : 29);
@@ -294,11 +300,12 @@ function dueRow(d, units) {
   const late = !d.paid && d.daysLeft < 0;
   return h('div', { class: 'row' },
     h('div', null, h('div', { class: 't' }, d.title, d.remaining !== null ? h('span', { class: 'badge' }, fa(d.remaining) + ' قسط مانده') : null),
-      h('div', { class: 's' }, late ? h('i', { class: 'ic bad' }, '●') : null, 'روز ' + fa(d.day) + ' · ' + when + ' · ' + d.acc)),
+      h('div', { class: 's' }, late ? h('i', { class: 'ic bad' }, '●') : null, ['روز ' + fa(d.day), when, d.acc].filter(Boolean).join(' · '))),
     h('div', { style: 'display:flex;align-items:center;gap:8px' }, h('div', { class: 'v' }, d.amount ? h('span', null, native(d.amount, units[d.acc] || TOMAN).replace(' تومان', '')) : '—'),
       d.paid ? h('span', { class: 'state' }, h('i', { class: 'ic good' }, '✓')) : h('button', { class: 'mini', onclick: () => payDue(d, units) }, d.type === 'درآمد' ? 'رسید' : 'پرداخت شد')));
 }
 async function payDue(d, units) {
+  if (d.kind === 'credit') return openPay(d);
   let amount = d.amount;
   if (!(amount > 0)) {
     const v = prompt('مبلغ «' + d.title + '» به ' + (units[d.acc] || TOMAN) + ':');
@@ -308,10 +315,76 @@ async function payDue(d, units) {
   } else if (!confirm('«' + d.title + '» با مبلغ ' + native(amount, units[d.acc] || TOMAN) + ' ثبت شود؟')) return;
   try { const r = await apiPost({ a: 'due_pay', row: d.row, amount: amount, by: cfg.me, boot: 1 }); toast(r.message); S.boot = r.boot; render(); } catch (e) { toast(e.message, true); }
 }
+// بدهی اسنپ‌پی و دیجی‌پی: هر حساب جدا، هر ماه با مبلغ خودش
+function creditCard(b) {
+  const list = b.credit || [];
+  if (!list.length) return null;
+  return h('div', { class: 'card', id: 'credit' }, h('h2', null, 'اسنپ‌پی و دیجی‌پی', h('small', null, 'قسط هر ماه'), h('span', { class: 'sp' }), h('button', { class: 'mini', onclick: () => openDebt() }, '+ بدهی قبلی')),
+    list.map(c => [h('div', { class: 'acct' }, h('span', { class: 't' }, c.name), c.total ? moneyEl(c.total, 'v') : h('span', { class: 's', style: 'font-size:12px;color:var(--muted)' }, 'بدهی ندارد')),
+      c.months.length ? barList(c.months.map(m => ({ name: monthLabel(m.key, b.month.key), value: m.amount })), 0, Math.max(...list.flatMap(x => x.months.map(m => m.amount)))) : null]));
+}
+function openPay(d) {
+  const b = S.boot, root = document.getElementById('modal'), close = () => root.replaceChildren();
+  const cards = b.accounts.filter(a => a.unit === TOMAN && a.kind !== 'دارایی دیگر' && !a.credit);
+  let from = cards.some(a => a.name === d.acc) ? d.acc : (cards[0] || {}).name;
+  const old = d.old || 0;
+  const draw = () => {
+    const btn = h('button', { class: 'btn', type: 'button', onclick: async () => {
+      btn.disabled = true; btn.textContent = 'در حال ثبت…';
+      try { const r = await apiPost({ a: 'due_pay', id: d.id, account: from, by: cfg.me, boot: 1 }); S.boot = r.boot; close(); toast(r.message); if (S.tab === 'report') S.report.data = null; render(); }
+      catch (e) { toast(e.message, true); btn.disabled = false; btn.textContent = 'پرداخت شد'; }
+    } }, 'پرداخت شد');
+    root.replaceChildren(h('div', { class: 'sheet-bg', onclick: e => { if (e.target.classList.contains('sheet-bg')) close(); } }, h('div', { class: 'sheet', role: 'dialog', 'aria-label': 'پرداخت قسط' },
+      h('div', { class: 'shead' }, h('h2', null, d.title), h('button', { class: 'icon-btn', 'aria-label': 'بستن', onclick: close }, '×')),
+      h('div', { class: 'hint', style: 'font-size:22px;font-weight:700;color:var(--ink)' }, moneyText(d.amount)),
+      h('div', { class: 'field' }, h('label', null, 'از کدام کارت پرداخت شد؟'), h('div', { class: 'chips' }, cards.map(a => h('button', { class: 'chip' + (a.name === from ? ' on' : ''), type: 'button', onclick: () => { from = a.name; draw(); } }, a.name)))),
+      h('div', { class: 'hint', id: 'payhint' }, old >= d.amount ? 'بدهی قبلی است؛ به‌عنوان خرج «قسط وام» همین ماه ثبت می‌شود'
+        : old > 0 ? moneyText(old) + ' بدهی قبلی به‌عنوان خرج «قسط وام» ثبت می‌شود و ' + moneyText(d.amount - old) + ' قسط خریدهای ثبت‌شده فقط انتقال است'
+          : 'خرجش روز خرید حساب شده؛ این پرداخت فقط انتقال از کارت است'), btn)));
+  };
+  draw();
+}
+// بدهی‌ای که از قبل داریم: هر ماه یک مبلغ
+function openDebt(account) {
+  const root = document.getElementById('modal'), close = () => { root.replaceChildren(); render(); };
+  const first = S.boot.credit.find(c => c.name === account) || S.boot.credit.find(c => c.owner === cfg.me) || S.boot.credit[0];
+  const D = { acc: first.name, month: S.boot.month.key, amount: '', note: '' };
+  const parse = v => { const x = parseFloat(latin(v)); return x > 0 ? x : 0; };
+  const draw = () => {
+    const b = S.boot, c = b.credit.find(x => x.name === D.acc), keys = [0, 1, 2, 3, 4, 5].map(i => shiftMonth(b.month.key, i));
+    const hint = h('div', { class: 'hint' }, parse(D.amount) ? moneyText(parse(D.amount)) : 'مبلغ قسط همان ماه به تومان');
+    const amount = h('input', { class: 'input amount', inputmode: 'decimal', placeholder: '۰', value: D.amount, 'aria-label': 'مبلغ بدهی', oninput: e => { D.amount = e.target.value; hint.textContent = parse(D.amount) ? moneyText(parse(D.amount)) : 'مبلغ قسط همان ماه به تومان'; } });
+    const btn = h('button', { class: 'btn', type: 'button', onclick: async () => {
+      if (!parse(D.amount)) return toast('مبلغ را وارد کن', true);
+      btn.disabled = true; btn.textContent = 'در حال ثبت…';
+      try { const r = await apiPost({ a: 'inst_add', account: D.acc, month: D.month, amount: parse(D.amount), note: D.note, boot: 1 }); S.boot = r.boot; toast(r.message); D.amount = ''; D.note = ''; D.month = shiftMonth(D.month, 1); draw(); }
+      catch (e) { toast(e.message, true); btn.disabled = false; btn.textContent = 'ثبت و ماه بعد'; }
+    } }, 'ثبت و ماه بعد');
+    const top = root.querySelector('.sheet') ? root.querySelector('.sheet').scrollTop : 0;
+    root.replaceChildren(h('div', { class: 'sheet-bg', onclick: e => { if (e.target.classList.contains('sheet-bg')) close(); } }, h('div', { class: 'sheet', role: 'dialog', 'aria-label': 'بدهی قبلی' },
+      h('div', { class: 'shead' }, h('h2', null, 'بدهی قبلی اسنپ‌پی و دیجی‌پی'), h('button', { class: 'icon-btn', 'aria-label': 'بستن', onclick: close }, '×')),
+      h('div', { class: 'hint' }, 'بدهی خریدهایی که قبل از این اپ انجام شده: برای هر ماه، مبلغی که همان ماه باید پرداخت شود'),
+      h('div', { class: 'field' }, h('label', null, 'کدام حساب؟'), h('div', { class: 'chips' }, b.credit.map(x => h('button', { class: 'chip' + (x.name === D.acc ? ' on' : ''), type: 'button', onclick: () => { D.acc = x.name; draw(); } }, x.name)))),
+      h('div', { class: 'field' }, h('label', null, 'سررسید کدام ماه؟'), h('div', { class: 'chips' }, (keys.includes(D.month) ? keys : keys.concat([D.month])).map(k => h('button', { class: 'chip' + (k === D.month ? ' on' : ''), type: 'button', onclick: () => { D.month = k; draw(); } }, monthLabel(k, b.month.key))))),
+      h('div', { class: 'field' }, amount, h('div', { class: 'chips', style: 'justify-content:center' }, [['هزار', 1e3], ['میلیون', 1e6]].map(([l, m]) => h('button', { class: 'chip', type: 'button', onclick: () => { const v = parse(D.amount); if (v) { D.amount = String(Math.round(v * m)); draw(); } } }, '× ' + l)))),
+      hint,
+      h('div', { class: 'field' }, h('label', null, 'بابت'), h('input', { class: 'input', value: D.note, placeholder: 'اختیاری', 'aria-label': 'بابت', oninput: e => { D.note = e.target.value; } })),
+      btn,
+      c.rows.length ? h('div', { class: 'card' }, h('h2', null, 'قسط‌های باز ' + c.name, h('span', { class: 'sp' }), moneyEl(c.total)), h('div', { class: 'rows' }, c.rows.map(instRow))) : null)));
+    root.querySelector('.sheet').scrollTop = top;
+  };
+  S.redrawDebt = draw;
+  draw();
+}
+function instRow(x) {
+  return h('div', { class: 'row' }, h('div', null, h('div', { class: 't' }, monthLabel(x.month, S.boot.month.key)), h('div', { class: 's' }, [x.note, x.part ? 'قسط ' + fa(x.part) : ''].filter(Boolean).join(' · '))),
+    h('div', { style: 'display:flex;align-items:center;gap:8px' }, h('div', { class: 'v' }, moneyEl(x.amount)),
+      x.manual ? h('button', { class: 'x', 'aria-label': 'حذف قسط', onclick: async () => { if (!confirm('این قسط حذف شود؟')) return; try { const r = await apiPost({ a: 'inst_delete', id: x.id, boot: 1 }); S.boot = r.boot; toast('حذف شد'); if (document.querySelector('#modal .sheet') && S.redrawDebt) S.redrawDebt(); else render(); } catch (e) { toast(e.message, true); } } }, '×') : null));
+}
 function viewHome() {
   const b = S.boot, w = b.worth, units = {}; b.accounts.forEach(a => { units[a.name] = a.unit; });
   const group = (title, list, note, action) => list.length ? h('div', { class: 'card' }, h('h2', null, title, note ? h('small', null, note) : null, h('span', { class: 'sp' }), action || null), h('div', { class: 'rows' }, list.map(accountRow))) : null;
-  const cash = b.accounts.filter(a => a.unit === TOMAN && a.kind !== 'دارایی دیگر');
+  const cash = b.accounts.filter(a => a.unit === TOMAN && a.kind !== 'دارایی دیگر' && !a.credit);
   const fx = b.accounts.filter(a => a.unit !== TOMAN && (a.balance !== 0 || a.kind === 'ارز'));
   const other = b.accounts.filter(a => a.kind === 'دارایی دیگر' && a.balance !== 0);
   const liq = money(w.liquid);
@@ -325,6 +398,7 @@ function viewHome() {
         h('div', null, h('dt', null, 'همه‌ی دارایی‌ها'), h('dd', null, moneyText(w.assets).replace(' تومان', ''))),
         w.debts ? h('div', null, h('dt', null, 'بدهی'), h('dd', null, moneyText(w.debts).replace(' تومان', ''))) : null)),
     group('کارت‌ها و نقد', cash, null, h('button', { class: 'mini', onclick: () => openAdd({ type: CONV }) }, 'انتقال بین حساب‌ها')),
+    creditCard(b),
     group('ارز و طلا', fx, 'مقدار و ارزش روز'),
     group('دارایی‌های دیگر', other),
     h('div', { class: 'card' }, h('h2', null, 'خانه در ' + b.month.name), h('div', { class: 'tiles' }, tile('درآمد', sum['خانه'].income), tile('خرج', sum['خانه'].expense), tile('مانده', sum['خانه'].net))),
@@ -472,6 +546,8 @@ function viewMore() {
     h('div', { class: 'card' }, h('h2', null, 'همه‌ی سررسیدهای ' + b.month.name), b.dues.length ? h('div', { class: 'rows' }, b.dues.map(d => dueRow(d, units))) : h('p', { class: 'empty' }, 'سررسیدی تعریف نشده')),
     b.worth.debtList.length ? h('div', { class: 'card' }, h('h2', null, 'بدهی‌ها', h('small', null, 'اقساط باقی‌مانده')),
       h('div', { class: 'rows' }, b.worth.debtList.map(x => h('div', { class: 'row' }, h('div', null, h('div', { class: 't' }, x.title), h('div', { class: 's' }, fa(x.remaining) + ' قسط × ' + moneyText(x.amount))), h('div', { class: 'v' }, moneyEl(x.value)))))) : null,
+    (b.credit || []).map(c => h('div', { class: 'card' }, h('h2', null, 'قسط‌های باز ' + c.name, h('small', null, 'سررسید روز ' + fa(c.dueDay)), h('span', { class: 'sp' }), h('button', { class: 'mini', onclick: () => openDebt(c.name) }, '+ بدهی قبلی')),
+      c.rows.length ? h('div', { class: 'rows' }, c.rows.map(instRow)) : h('p', { class: 'empty' }, 'قسط بازی ندارد'))),
     h('div', { class: 'card' }, h('h2', null, 'قیمت‌ها'),
       h('div', { class: 'rows' }, b.prices.filter(p => p.price > 0).map(p => h('div', { class: 'row' }, h('div', null, h('div', { class: 't' }, p.unit), h('div', { class: 's' }, p.manual ? 'قیمت دستی از شیت' : 'به‌روزرسانی ' + fa(p.at))), h('div', { class: 'v' }, moneyEl(p.price))))),
       h('button', { class: 'btn ghost', style: 'margin-top:10px', onclick: async e => { e.target.disabled = true; try { const r = await apiPost({ a: 'prices' }); toast(r.message); await loadBoot(true); } catch (err) { toast(err.message, true); } e.target.disabled = false; } }, 'به‌روزرسانی قیمت‌ها')),
@@ -483,14 +559,19 @@ function viewMore() {
 function openAdd(preset) {
   const b = S.boot;
   const myCard = (b.accounts.find(a => a.unit === TOMAN && a.owner === cfg.me && a.kind === 'کارت') || b.accounts.find(a => a.unit === TOMAN) || {}).name;
-  const F = Object.assign({ type: 'خرج', scope: 'خانه', amount: '', cat: '', grp: '', acc: myCard, to: '', toAmount: '', date: b.today, cal: null, party: '', note: '', items: [] }, preset && preset.type ? { type: preset.type } : {});
+  const F = Object.assign({ type: 'خرج', scope: 'خانه', amount: '', cat: '', grp: '', acc: myCard, to: '', toAmount: '', date: b.today, cal: null, party: '', note: '', items: [], inst: null, first: null, payFrom: '' }, preset && preset.type ? { type: preset.type } : {});
   const root = document.getElementById('modal');
-  const close = () => root.replaceChildren();
+  const close = () => { if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); root.replaceChildren(); };
+  const creditOf = n => (b.credit || []).find(c => c.name === n);
   const unitOf = n => (b.accounts.find(a => a.name === n) || {}).unit || TOMAN;
   const parse = v => { const x = parseFloat(latin(v)); return x > 0 ? x : 0; };
   function draw() {
     const conv = F.type === CONV, shop = F.scope === 'گل‌فروشی' && !conv;
     const buying = shop && F.type === 'خرج' && F.cat === 'خرید گل';
+    if (F.type !== 'خرج' && creditOf(F.acc)) F.acc = myCard;   // با حساب اعتباری فقط می‌شود خرید کرد
+    const cr = !conv && F.type === 'خرج' ? creditOf(F.acc) : null;
+    if (cr && F.inst === null) { F.inst = cr.instCount; F.first = F.inst > 1 ? 'now' : 'later'; F.payFrom = cr.payFrom || myCard; }
+    if (!cr) F.inst = null;
     const unit = unitOf(F.acc), toUnit = unitOf(F.to);
     const cats = b.categories.filter(c => c.scope === F.scope && c.type === F.type);
     const frequent = cats.filter(c => c.uses > 0).sort((x, y) => y.uses - x.uses).slice(0, 8);
@@ -498,10 +579,30 @@ function openAdd(preset) {
     const gtabs = (frequent.length ? ['پرکاربرد'] : []).concat(groups);
     if (!gtabs.includes(F.grp)) F.grp = gtabs[0] || '';
     const shown = F.grp === 'پرکاربرد' ? frequent : cats.filter(c => c.group === F.grp);
-    const amount = h('input', { class: 'input amount', inputmode: 'decimal', placeholder: '۰', value: F.amount, 'aria-label': 'مبلغ', oninput: e => { F.amount = e.target.value; hint.textContent = previewText(); } });
+    const amount = h('input', { class: 'input amount', inputmode: 'decimal', placeholder: '۰', value: F.amount, 'aria-label': 'مبلغ', oninput: e => { F.amount = e.target.value; refresh(); } });
     const itemsTotal = () => F.items.reduce((t, x) => t + parse(x.qty) * parse(x.price), 0);
     const previewText = () => { const v = buying && F.items.length ? itemsTotal() : parse(F.amount); return v ? native(v, unit) + (conv && F.to && parse(F.toAmount) && unit !== toUnit ? ' · نرخ هر ' + (unit === TOMAN ? toUnit : unit) + ' ' + moneyText(unit === TOMAN ? v / parse(F.toAmount) : parse(F.toAmount) / v) : '') : (unit === TOMAN ? 'مبلغ به تومان' : 'مقدار به ' + unit); };
     const hint = h('div', { class: 'hint', id: 'preview' }, previewText());
+    // خرید با اسنپ‌پی/دیجی‌پی: چند قسط، و قسط اول همین حالا از کدام کارت
+    const cards = b.accounts.filter(a => a.unit === TOMAN && a.kind !== 'دارایی دیگر' && !a.credit);
+    const planRows = h('div', { class: 'mrows', id: 'planrows' });
+    const fillPlan = () => {
+      if (!cr) return;
+      const v = Math.round(buying && F.items.length ? itemsTotal() : parse(F.amount)), n = F.inst, now = F.first === 'now' && n > 1;
+      const each = Math.floor(v / n), base = F.date.slice(0, 7);
+      planRows.replaceChildren(...Array.from({ length: n }, (_, i) => h('div', { class: 'mrow' }, h('span', null, monthLabel(shiftMonth(base, now ? i : i + 1), base) + (now && i === 0 ? ' · همین الان از ' + F.payFrom : '')),
+        h('b', null, v ? moneyText(i === 0 ? v - each * (n - 1) : each) : '—'))));
+    };
+    const refresh = () => { hint.textContent = previewText(); fillPlan(); };
+    const setInst = n => { n = Math.min(36, Math.max(1, n)); if (n === 1) F.first = 'later'; else if (F.inst === 1) F.first = 'now'; F.inst = n; draw(); };
+    const planBox = cr ? h('div', { class: 'plan', id: 'plan' },
+      h('div', { class: 'field' }, h('label', null, 'چند قسط؟'), h('div', { class: 'step' },
+        h('button', { type: 'button', 'aria-label': 'قسط کمتر', onclick: () => setInst(F.inst - 1) }, '−'), h('b', null, F.inst === 1 ? 'یک‌جا' : fa(F.inst) + ' قسط'), h('button', { type: 'button', 'aria-label': 'قسط بیشتر', onclick: () => setInst(F.inst + 1) }, '+'))),
+      F.inst > 1 ? h('div', { class: 'field' }, h('label', null, 'قسط اول'), h('div', { class: 'chips' },
+        cards.map(a => h('button', { class: 'chip' + (F.first === 'now' && F.payFrom === a.name ? ' on' : ''), type: 'button', onclick: () => { F.first = 'now'; F.payFrom = a.name; draw(); } }, 'الان از ' + a.name)),
+        h('button', { class: 'chip' + (F.first === 'later' ? ' on' : ''), type: 'button', onclick: () => { F.first = 'later'; draw(); } }, 'از ماه بعد'))) : null,
+      planRows) : null;
+    fillPlan();
     const mult = unit === TOMAN ? h('div', { class: 'chips', style: 'justify-content:center' }, [['هزار', 1e3], ['میلیون', 1e6]].map(([l, m]) => h('button', { class: 'chip', type: 'button', onclick: () => { const v = parse(F.amount); if (v) { F.amount = String(Math.round(v * m)); draw(); } } }, '× ' + l))) : null;
     const accChips = (value, pick, filter) => h('div', { class: 'chips' }, b.accounts.filter(filter || (() => true)).map(a => h('button', { class: 'chip' + (a.name === value ? ' on' : ''), type: 'button', onclick: () => { pick(a.name); draw(); } }, a.name)));
     const tomanOnly = a => a.unit === TOMAN && a.kind !== 'دارایی دیگر';
@@ -523,8 +624,8 @@ function openAdd(preset) {
       return h('div', { class: 'itemc' },
         h('div', { class: 'ihead' }, name, h('button', { class: 'x', type: 'button', 'aria-label': 'حذف قلم', onclick: () => { F.items.splice(i, 1); draw(); } }, '×')), sug,
         h('div', { class: 'irow' },
-          h('input', { class: 'input', placeholder: 'تعداد', inputmode: 'decimal', value: x.qty, 'aria-label': 'تعداد', oninput: e => { x.qty = e.target.value; hint.textContent = previewText(); } }),
-          h('input', { class: 'input', placeholder: 'قیمت هر شاخه (تومان)', inputmode: 'decimal', value: x.price, 'aria-label': 'قیمت هر شاخه', oninput: e => { x.price = e.target.value; hint.textContent = previewText(); } })));
+          h('input', { class: 'input', placeholder: 'تعداد', inputmode: 'decimal', value: x.qty, 'aria-label': 'تعداد', oninput: e => { x.qty = e.target.value; refresh(); } }),
+          h('input', { class: 'input', placeholder: 'قیمت هر شاخه (تومان)', inputmode: 'decimal', value: x.price, 'aria-label': 'قیمت هر شاخه', oninput: e => { x.price = e.target.value; refresh(); } })));
     };
     const dp = F.date.split('/').map(Number), yesterday = jShift(b.today, -1);
     if (!F.cal) F.cal = { open: false, y: dp[0], m: dp[1] };
@@ -549,6 +650,7 @@ function openAdd(preset) {
       body.date = F.date;
       if (conv) { body.to = F.to; body.amount = parse(F.amount); body.to_amount = parse(F.toAmount) || ''; }
       else { body.category = F.cat; if (buying && F.items.length) body.items = F.items.map(x => ({ name: x.name, qty: parse(x.qty), price: parse(x.price) })); else body.amount = parse(F.amount); }
+      if (cr) { body.installments = F.inst; body.first = F.inst > 1 ? F.first : 'later'; if (body.first === 'now') body.pay_from = F.payFrom; }
       if (!conv && !F.cat) return toast('دسته را انتخاب کن', true);
       if (!F.acc) return toast('حساب را انتخاب کن', true);
       if (conv && !F.to) return toast('حساب مقصد را انتخاب کن', true);
@@ -564,7 +666,7 @@ function openAdd(preset) {
       conv ? h('div', { class: 'hint' }, 'کارت به کارت، برداشت تتر به کارت، خرید طلا و دلار') : seg(['خانه', 'گل‌فروشی'], F.scope, v => { F.scope = v; F.cat = ''; F.grp = ''; F.items = []; draw(); }),
       buying ? null : h('div', { class: 'field' }, amount, mult),
       hint,
-      conv ? [h('div', { class: 'field' }, h('label', null, 'از حساب'), accChips(F.acc, v => { F.acc = v; })),
+      conv ? [h('div', { class: 'field' }, h('label', null, 'از حساب'), accChips(F.acc, v => { F.acc = v; }, a => !a.credit)),
         h('div', { class: 'field' }, h('label', null, 'به حساب'), accChips(F.to, v => { F.to = v; }, a => a.name !== F.acc)),
         F.to && unit !== toUnit ? h('div', { class: 'field' }, h('label', null, 'چقدر به «' + F.to + '» رسید؟ (' + toUnit + ')'),
           h('input', { class: 'input', inputmode: 'decimal', style: 'direction:ltr;text-align:center', value: F.toAmount, placeholder: '۰', 'aria-label': 'مبلغ مقصد', oninput: e => { F.toAmount = e.target.value; hint.textContent = previewText(); } })) : null]
@@ -573,7 +675,8 @@ function openAdd(preset) {
             h('div', { class: 'cgrid' }, shown.map(c => h('button', { class: 'cbtn' + (c.name === F.cat ? ' on' : ''), type: 'button', onclick: () => { F.cat = c.name; if (c.name === 'خرید گل' && !F.items.length) F.items = [{ name: '', qty: '', price: '' }]; draw(); } }, c.name)))),
           buying ? h('div', { class: 'field' }, h('label', null, 'گل‌های خریده‌شده (جمع خودکار حساب می‌شود)'), h('div', { class: 'items' }, F.items.map(itemRow)),
             h('button', { class: 'mini', type: 'button', style: 'justify-self:start', onclick: () => { F.items.push({ name: '', qty: '', price: '' }); draw(); } }, '+ گل دیگر')) : null,
-          h('div', { class: 'field' }, h('label', null, F.type === 'خرج' ? 'از کدام حساب؟' : 'به کدام حساب؟'), accChips(F.acc, v => { F.acc = v; }, F.type === 'خرج' ? tomanOnly : a => a.kind !== 'دارایی دیگر')),
+          h('div', { class: 'field' }, h('label', null, F.type === 'خرج' ? 'از کدام حساب؟' : 'به کدام حساب؟'), accChips(F.acc, v => { if (v !== F.acc) F.inst = null; F.acc = v; }, F.type === 'خرج' ? tomanOnly : a => a.kind !== 'دارایی دیگر' && !a.credit)),
+          planBox,
           shop && F.type === 'درآمد' ? h('div', { class: 'field' }, h('label', null, 'مشتری'), h('input', { class: 'input', value: F.party, placeholder: 'اختیاری', 'aria-label': 'مشتری', oninput: e => { F.party = e.target.value; } })) : null],
       h('div', { class: 'field' }, h('label', null, 'تاریخ'), dateChips),
       h('div', { class: 'field' }, h('label', null, 'توضیحات'), h('input', { class: 'input', value: F.note, placeholder: 'اختیاری', 'aria-label': 'توضیحات', oninput: e => { F.note = e.target.value; } })),
